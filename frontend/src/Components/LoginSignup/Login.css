@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /* margin-top: 100px; */
+  max-height: 100vh; /* Ensures container doesn't exceed viewport height */
+  width: 600px;
+  background: #fff;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  overflow: auto; /* Adds a scrollbar to the container if the content overflows */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color: #395b64;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 81px;
+  height: 6px;
+  background: #395b64;
+  border-radius: 9px;
+}
+
+.inputs {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 80px;
+  background: #e7f6f2;
+  border-radius: 6px;
+}
+
+.input img {
+  width: 30px; /* or any size you prefer */
+  height: auto; /* maintains the aspect ratio */
+  margin: 0px 30px;
+}
+
+.input input {
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #2c3333;
+  font-size: 19px;
+}
+
+.forgot-password {
+  margin-top: 27px;
+  color: #2c3333;
+  font-size: 18px;
+}
+
+.forgot-password span {
+  color: #a5c9ca;
+  cursor: pointer;
+  font-weight: bold; /* Makes the text bolder */
+  /* font-size: larger; Increases the font size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot-password span:hover {
+  color: #395b64; /* Replace with the color you want on hover */
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 59px;
+  color: #fff;
+  background: #a5c9ca;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.submit:hover {
+  color: #fff; /* Replace with the color you want on hover */
+  background: #395b64;
+}
