@@ -94,7 +94,7 @@
 .submit-container {
   display: flex;
   gap: 30px;
-  margin: 30px auto;
+  margin: 60px auto;
 }
 
 .submit {
@@ -109,6 +109,11 @@
   font-size: 19px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.submit:hover {
+  color: #fff; /* Replace with the color you want on hover */
+  background: #395b64;
 }
 
 .submit:hover {
