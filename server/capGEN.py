@@ -1,11 +1,21 @@
+import os
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy as np
 import random
 
+<<<<<<< Updated upstream
+=======
+# Check if the 'captchas' directory exists, if not, create it
+captcha_folder = 'server/captchas'  # Adjust this path if needed
+text_folder = 'server/cap'          # Folder to save captcha text files
+for folder in [captcha_folder, text_folder]:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+>>>>>>> Stashed changes
 
 # Generates a CAPTCHA of given length
 def generateCaptchaText(n):
-    chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    chrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     captcha = "".join(random.choices(chrs, k=n))
     return captcha
 
@@ -51,13 +61,22 @@ def createComplexCaptchaImage(captcha_text, img_size=(280, 80), font_size=36):
 
     # Optionally add noise and other effects here
 
-    # Save the image to a file
-    img.save("captcha.png")
+    # Save the image to a file in the 'captchas' folder
+    img_path = os.path.join(captcha_folder, f"captcha_{captcha_text}.png")
+    img.save(img_path)
 
     return img
+
+def saveCaptchaTextToFile(captcha_text):
+    file_path = os.path.join(text_folder, f"captcha_{captcha_text}.txt")
+    with open(file_path, 'w') as file:
+        file.write(captcha_text)
 
 # Generate a random CAPTCHA text
 captcha_text = generateCaptchaText(6)
 
 # Create and save the complex CAPTCHA image
 createComplexCaptchaImage(captcha_text).show()
+
+# Save the CAPTCHA text to a file
+saveCaptchaTextToFile(captcha_text)
