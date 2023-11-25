@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy as np
 import random
 
+
 # Generates a CAPTCHA of given length
 def generateCaptchaText(n):
     chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
