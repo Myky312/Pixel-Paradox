@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Signup />} /> {/* Set Signup as the default route */}
+        <Route path="/" element={<Signup/>} /> {/* Set Signup as the default route */}
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
